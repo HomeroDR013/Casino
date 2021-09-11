@@ -12,38 +12,9 @@ namespace apsys.casino.domain
 
         public string Value { get; set; }
 
-        public static List<string> SuitList = new List<string>
-        (new string[]
-        {
-            SuitConstants.Spades,
-            SuitConstants.Clubs,
-            SuitConstants.Diamonds,
-            SuitConstants.Hearts
-
-        });
-
-        public static List<string> ValueList = new List<string>
-        (new string[]
-        {
-            ValueConstants.Ace,
-            ValueConstants.Two,
-            ValueConstants.Three,
-            ValueConstants.Four,
-            ValueConstants.Five,
-            ValueConstants.Six,
-            ValueConstants.Seven,
-            ValueConstants.Eight,
-            ValueConstants.Nine,
-            ValueConstants.Ten,
-            ValueConstants.Jack,
-            ValueConstants.Queen,
-            ValueConstants.King
-
-        });
-
         public bool IsValid()
         {
-            if (SuitList.Contains(Suit) && ValueList.Contains(Value))
+            if (Constants.SuitList.Contains(Suit) && Constants.ValueList.Contains(Value))
                 return true;
             else
                 return false;
@@ -51,8 +22,8 @@ namespace apsys.casino.domain
 
         public void SetMockData()
         {
-            this.Suit = SuitConstants.Spades;
-            this.Value = ValueConstants.Ace;
+            this.Suit = Constants.Spades;
+            this.Value = Constants.Ace;
         }
     }
 }

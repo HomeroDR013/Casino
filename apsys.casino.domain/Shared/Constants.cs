@@ -4,16 +4,20 @@ using System.Text;
 
 namespace apsys.casino.domain.Shared
 {
-    public static class SuitConstants
+    public static class Constants
     {
         public const string Spades = "SPADES";
         public const string Clubs = "CLUBS";
         public const string Diamonds = "DIAMONDS";
         public const string Hearts = "HEARTS";
-    }
+        
+        public static string[] SuitList = new string[] {
+            Spades,
+            Clubs,
+            Diamonds,
+            Hearts
+        };
 
-    public static class ValueConstants
-    {
         public const string Ace = "1";
         public const string Two = "2";
         public const string Three = "3";
@@ -27,5 +31,21 @@ namespace apsys.casino.domain.Shared
         public const string Jack = "J";
         public const string Queen = "Q";
         public const string King = "K";
+
+        public static string[] ValueList = new string[] {
+            Ace,
+            Two,
+            Three,
+            Four,
+            Five,
+            Six,
+            Seven,
+            Eight,
+            Nine,
+            Ten,
+            Jack,
+            Queen,
+            King
+        };
     }
 }

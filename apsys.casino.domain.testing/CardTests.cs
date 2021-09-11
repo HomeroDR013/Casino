@@ -18,10 +18,10 @@ namespace apsys.casino.domain.testing
             ClassUnderTest.SetMockData();
         }
 
-        [TestCase(SuitConstants.Spades)]
-        [TestCase(SuitConstants.Clubs)]
-        [TestCase(SuitConstants.Diamonds)]
-        [TestCase(SuitConstants.Hearts)]
+        [TestCase(Constants.Spades)]
+        [TestCase(Constants.Clubs)]
+        [TestCase(Constants.Diamonds)]
+        [TestCase(Constants.Hearts)]
         public void IsValid_ValidSuit_ReturnTrue(string suit) 
         {
             //Arrange - Preparación
@@ -51,19 +51,19 @@ namespace apsys.casino.domain.testing
             Assert.IsFalse(result);
         }
 
-        [TestCase(ValueConstants.Ace)]
-        [TestCase(ValueConstants.Two)]
-        [TestCase(ValueConstants.Three)]
-        [TestCase(ValueConstants.Four)]
-        [TestCase(ValueConstants.Five)]
-        [TestCase(ValueConstants.Six)]
-        [TestCase(ValueConstants.Seven)]
-        [TestCase(ValueConstants.Eight)]
-        [TestCase(ValueConstants.Nine)]
-        [TestCase(ValueConstants.Ten)]
-        [TestCase(ValueConstants.Jack)]
-        [TestCase(ValueConstants.Queen)]
-        [TestCase(ValueConstants.King)]
+        [TestCase(Constants.Ace)]
+        [TestCase(Constants.Two)]
+        [TestCase(Constants.Three)]
+        [TestCase(Constants.Four)]
+        [TestCase(Constants.Five)]
+        [TestCase(Constants.Six)]
+        [TestCase(Constants.Seven)]
+        [TestCase(Constants.Eight)]
+        [TestCase(Constants.Nine)]
+        [TestCase(Constants.Ten)]
+        [TestCase(Constants.Jack)]
+        [TestCase(Constants.Queen)]
+        [TestCase(Constants.King)]
         public void IsValid_ValidValue_ReturnTrue(string value)
         {
             //Arrange - Preparación
