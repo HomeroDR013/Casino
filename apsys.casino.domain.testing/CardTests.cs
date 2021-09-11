@@ -9,6 +9,15 @@ namespace apsys.casino.domain.testing
 {
     class CardTests
     {
+        Card ClassUnderTest;
+
+        [SetUp]
+        public void SetUp()
+        {
+            ClassUnderTest = new Card();
+            ClassUnderTest.SetMockData();
+        }
+
         [TestCase(SuitConstants.Spades)]
         [TestCase(SuitConstants.Clubs)]
         [TestCase(SuitConstants.Diamonds)]
@@ -16,12 +25,10 @@ namespace apsys.casino.domain.testing
         public void IsValid_ValidSuit_ReturnTrue(string suit) 
         {
             //Arrange - Preparación
-            Card card = new Card();
-            card.SetMockData();
-            card.Suit = suit;
+            ClassUnderTest.Suit = suit;
 
             //Act - Ejecución
-            bool result = card.IsValid();
+            bool result = ClassUnderTest.IsValid();
 
             //Assert - Verificación
             Assert.IsTrue(result);
@@ -35,12 +42,10 @@ namespace apsys.casino.domain.testing
         public void IsValid_InvalidSuit_ReturnFalse(string suit)
         {
             //Arrange - Preparación
-            Card card = new Card();
-            card.SetMockData();
-            card.Suit = suit;
+            ClassUnderTest.Suit = suit;
 
             //Act - Ejecución
-            bool result = card.IsValid();
+            bool result = ClassUnderTest.IsValid();
 
             //Assert - Verificación
             Assert.IsFalse(result);
@@ -62,12 +67,10 @@ namespace apsys.casino.domain.testing
         public void IsValid_ValidValue_ReturnTrue(string value)
         {
             //Arrange - Preparación
-            Card card = new Card();
-            card.SetMockData();
-            card.Value = value;
+            ClassUnderTest.Value = value;
 
             //Act - Ejecución
-            bool result = card.IsValid();
+            bool result = ClassUnderTest.IsValid();
 
             //Assert - Verificación
             Assert.IsTrue(result);
@@ -87,12 +90,10 @@ namespace apsys.casino.domain.testing
         public void IsValid_InvalidValue_ReturnFalse(string value)
         {
             //Arrange - Preparación
-            Card card = new Card();
-            card.SetMockData();
-            card.Value = value;
+            ClassUnderTest.Value = value;
 
             //Act - Ejecución
-            bool result = card.IsValid();
+            bool result = ClassUnderTest.IsValid();
 
             //Assert - Verificación
             Assert.IsFalse(result);
